@@ -1,0 +1,29 @@
+/* ------ base ------ */
+
+@import "./base/reset.scss";
+@import "./base/core.scss";
+
+/* ------ Layouts ------ */
+
+@import "./layout/header.scss";
+@import "./layout/contactRight.scss";
+@import "./layout/article.scss";
+@import "./layout/pageHeader.scss";
+@import "./layout/carOffers.scss";
+@import "./layout/single.scss";
+
+/* ------ Components ------ */
+
+@import "./components/welcome.scss";
+@import "./components/homeSalon.scss";
+@import "./components/homeOffer.scss";
+@import "./components/homeApp.scss";
+@import "./components/homeNews.scss";
+@import "./components/newsletter.scss";
+@import "./components/tabsOffer.scss";
+
+
+/* footer */
+
+@import "./base/animations.scss";
+@import "./layout/footer.scss";

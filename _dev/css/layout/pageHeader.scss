@@ -1,0 +1,91 @@
+.pageHeader {
+    display: flex;
+    position: relative;
+    min-height: 90vh;
+    h3 {
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+}
+
+.pageHeader--inner {
+    width: 80vw;
+    padding: 10vh 0;
+    margin: auto;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    @include responsive('tablet') {
+        width: 90vw;
+    }
+}
+
+.pageHeader--inner * {
+    z-index: 1;
+}
+
+.pageHeader--inner h1 {
+    font-size: clamp(35px , 2.5vw, 4vw); 
+    line-height: clamp(45px , 3vw, 5.5vw);
+    margin-bottom: 50px;
+    @include responsive('tablet') {
+        font-size: clamp(22px , 2.5vw, 4vw); 
+        width: 80%;
+    }
+}
+
+.pageHeader--scroll {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    @include responsive('tablet') {
+        margin-left: -5vw;
+    }
+}
+
+.pageHeader--scroll p {
+    writing-mode: vertical-rl;
+    width: 40px;
+}
+
+.pageHeader--bg {
+    position: absolute;
+    right: 0;
+    top: 10vh;
+    width: 60vw;
+    max-height: 70vh;
+    object-fit: cover;
+    z-index: -1;
+    opacity: .3;
+    @include responsive('tablet') {
+        height: 60vh;
+        width: 80vw;
+    }
+}
+
+
+.pageHeader--text {
+    max-width: 90%;
+    @include responsive('tablet') {
+        width: 80%;
+    }
+
+    ul {
+        list-style-position: inside;
+    }
+
+    li::marker {
+        color: $red; 
+    }
+}
+
+.carOffer--line2 {
+    width: 2px;
+    height: 50vh;
+    position: absolute;
+    background-color: #d30c1c;
+    left: 5vw;
+}
+

@@ -1,0 +1,201 @@
+.homeOffer--imgCircle {
+    position: absolute;
+    left: 5%;
+    animation: welcomeCircle 40s linear infinite;
+    -webkit-animation: welcomeCircle 40s linear infinite;
+    z-index: -1;
+}
+
+.homeApp ul {
+    margin-top: 20px;
+}
+
+.homeApp--cols {
+    margin-top: 5vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 5vw;
+    @include responsive('small') {
+        grid-template-columns: 1fr;
+    }
+}
+
+.homeApp--col {
+    grid-column: span 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    padding-bottom: 5vh;
+    margin-bottom: 2px;
+    opacity: .8;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+
+.homeApp--col:nth-child(4):hover,
+.homeApp--col:nth-child(5):hover,
+.homeApp--col:nth-child(6):hover {
+    border-bottom: 2px solid #fff;
+    margin-bottom: 0;
+    opacity: 1;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+
+.homeApp--col img {
+    max-width: 80px;
+}
+
+.homeApp--col h1 {
+    font-size: clamp(25px , 1.5vw, 2vw); 
+    line-height: clamp(35px , 2vw, 2.5vw);
+    margin: 20px 0;
+    color: $red;
+}
+
+.homeApp--colsBorder {
+    width: 100%;
+    height: 2px;
+    margin-top: -2px;
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+.homeCar--inner {
+    position: relative;
+}
+
+.homeCar {
+    mix-blend-mode: lighten;
+    position: relative;
+    width: 80vw;
+    margin: auto;
+    @include responsive ('tablet') {
+        width: 90vw;
+    }
+}
+
+.homeCar--lightLeft, .homeCar--lightRight {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    width: min(5.5vw, 80px);
+    height: min(3.5vw, 80px);
+    background-color: #fff;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    filter: blur(30px);
+    -webkit-filter: blur(30px);
+    animation: lightLamp 4s linear infinite;
+    -webkit-animation: lightLamp 4s linear infinite;
+    @include responsive('tablet') {
+        filter: blur(5px);
+        width: min(5.5vw, 30px);
+        height: min(3.5vw, 30px);
+        -webkit-filter: blur(5px);
+        animation: lightLampMobile 4s linear infinite;
+        -webkit-animation: lightLampMobile 4s linear infinite;
+}
+}
+
+.homeCar--lightLeft {
+    top: 59%;
+    left: 19%;
+}
+
+.homeCar--lightRight {
+    right: 19%;
+    top: 59%;
+}
+
+.homeApp--more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10vh;
+    gap: 15px;
+    color: #858585;
+}
+
+@keyframes lightLamp {
+    0% {
+        
+    }
+    5% {
+        filter: blur(20px);
+        -webkit-filter: blur(20px);
+        background-color: rgb(255, 145, 0);
+    }
+
+    10% {
+        filter: blur(30px);
+        -webkit-filter: blur(30px);
+        background-color: #fff;
+    }
+
+    15% {
+        filter: blur(20px);
+        -webkit-filter: blur(20px);
+        background-color: rgb(255, 145, 0);
+    }
+
+    20% {
+        filter: blur(30px);
+        -webkit-filter: blur(30px);
+        background-color: #fff;
+    }
+
+    100% {
+        filter: blur(30px);
+        -webkit-filter: blur(30px);
+        background-color: #fff;
+    }
+}
+
+@include responsive ('tablet') {
+    @keyframes lightLampMobile {
+        0% {
+            
+        }
+        5% {
+            filter: blur(5px);
+            -webkit-filter: blur(5px);
+            background-color: rgb(255, 145, 0);
+}
+    
+        10% {
+            filter: blur(7px);
+            -webkit-filter: blur(7px);
+            background-color: #fff;
+}
+    
+        15% {
+            filter: blur(5px);
+            -webkit-filter: blur(5px);
+            background-color: rgb(255, 145, 0);
+}
+    
+        20% {
+            filter: blur(7px);
+            -webkit-filter: blur(7px);
+            background-color: #fff;
+}
+    
+        100% {
+            filter: blur(5px);
+            -webkit-filter: blur(5px);
+            background-color: #fff;
+        }
+    }
+}

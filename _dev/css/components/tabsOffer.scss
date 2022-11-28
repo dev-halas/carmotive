@@ -1,0 +1,33 @@
+.carOfferTabs {
+    position: relative;
+}
+
+.carOfferHeader {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1vw;
+    width: 100%;
+    margin-bottom: 20px;
+    
+}
+
+.carOffer--tabTitle {
+    text-align: center;
+    padding: 15px 20px;
+    background-color: #2f2f2f;
+}
+
+.--activeTitle {
+    background-color: $red;
+}
+
+.carOffer--tab {
+    height: 0;
+    display: none;
+    position: relative;
+}
+
+.--activeTab {
+    display: block;
+    height: auto;
+}

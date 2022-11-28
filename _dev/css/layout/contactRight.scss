@@ -1,0 +1,52 @@
+.contactRight {
+    position: absolute;
+    right: 0;
+    width: 10vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $solidDark;
+    @include responsive('tablet') {
+        width: 15vw;
+        height: 80vh;
+    }
+}
+
+.contactRight--contact {
+    writing-mode: vertical-rl;
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    align-items: center;
+}
+
+.contactRight--social {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: center;
+    padding-bottom: 5vh;
+}
+
+.contactRight--social svg {
+    fill: $white;
+    width: 40px;
+    height: 30px;
+}
+
+.contactRight--social svg:hover {
+    fill: $red;
+}
+
+.contactRight--contact a:hover {
+    color: #d30c1c;
+}
+
+a.otomoto:hover .st1 {
+    fill: #ed4c56;
+}
+
+a.otomoto:hover .st2 {
+    fill: #d1101c;
+}

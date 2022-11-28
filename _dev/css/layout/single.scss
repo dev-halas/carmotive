@@ -1,0 +1,13 @@
+.singlePost {
+    padding: 10vh 0;
+    width: min(1000px, 70vw);
+    margin: auto;
+    @include responsive('tablet') {
+        width: 90vw;
+    }
+}
+.singleImage img{
+    object-fit: cover;
+    width: 100%;
+    margin: 50px 0;
+}
